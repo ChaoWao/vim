@@ -1,9 +1,11 @@
+
+" gtags & ctags
 " global (gtags) settings
 let $GTAGSLABEL = 'native-pygments'
-let $GTAGSCONF = '/Users/wcwxy/.globalrc'
+let $GTAGSCONF = '/home/wcwxy/.globalrc'
 
 " 使用 gtags-cscope 作为默认 cscope 程序
-set cscopeprg=/usr/local/bin/gtags-cscope
+set cscopeprg=/usr/bin/gtags-cscope
 
 " basic vim settings
 source ~/.vim/vimrcs/basic.vim

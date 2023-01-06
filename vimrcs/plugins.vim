@@ -19,7 +19,6 @@ call plug#begin()
 "Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 
 " On-demand loading
-"Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 "Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
 
 " Using a tagged release; wildcard allowed (requires git 1.9.2 or above)
@@ -31,40 +30,46 @@ call plug#begin()
 " Plugin outside ~/.vim/plugged with post-update hook
 "Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
-" gtags management plugins
-Plug 'ludovicchabant/vim-gutentags'
-Plug 'skywind3000/gutentags_plus'
+" File Tree
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 
-" completion
-Plug 'ycm-core/YouCompleteMe'
-
-" linting
-Plug 'dense-analysis/ale'
+" colorscheme
+Plug 'flazz/vim-colorschemes'
 
 " status line
-Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
-" show differences
+" vim git
+Plug 'tpope/vim-fugitive'
+
+" show differences accroding to version control
 if has('nvim') || has('patch-8.0.902')
   Plug 'mhinz/vim-signify'
 else
   Plug 'mhinz/vim-signify', { 'branch': 'legacy' }
 endif
 
+" fuzzy finder
+Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
+
+" gtags management plugins
+Plug 'ludovicchabant/vim-gutentags'
+Plug 'skywind3000/gutentags_plus'
+
+" linting
+Plug 'dense-analysis/ale'
+
+" completion
+Plug 'ycm-core/YouCompleteMe'
+
 " color for c/cpp
 Plug 'octol/vim-cpp-enhanced-highlight'
 
 " lsp
-Plug 'prabirshrestha/vim-lsp'
-Plug 'mattn/vim-lsp-settings'
+"Plug 'prabirshrestha/vim-lsp'
+"Plug 'mattn/vim-lsp-settings'
 
-" fuzzy finder
-Plug 'Yggdroot/LeaderF'
-
-" colorscheme
-Plug 'flazz/vim-colorschemes'
 
 " Initialize plugin system
 " - Automatically executes `filetype plugin indent on` and `syntax enable`.
